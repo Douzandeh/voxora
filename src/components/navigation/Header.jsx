@@ -9,7 +9,7 @@ function Header() {
   return (
     <header>
       <Container>
-        <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary mb-3">
+        <Navbar collapseOnSelect expand="lg" className=" mb-3">
           <Container fluid>
             <Navbar.Brand href="#">Voxora</Navbar.Brand>
 
@@ -24,7 +24,7 @@ function Header() {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className="me-auto">
+                <Nav className="m-auto">
                   <Nav.Link href="#action1">Home</Nav.Link>
                   <Nav.Link href="#action2">Shop</Nav.Link>
                   <Nav.Link href="#action2">About us</Nav.Link>
@@ -35,11 +35,11 @@ function Header() {
             </Navbar.Offcanvas>
 
             <div className="d-flex align-items-center header-action">
-              <span className="pe-2 pe-md-3 me-2 me-md-3 border-end">
+              <span className="text-white pe-2 pe-md-3 me-2 me-md-3 border-end">
                 <i className="bi bi-person me-1 "></i>
                 <span className="d-none d-sm-inline-block">Login</span>
               </span>
-              <span className="me-1 me-md-3">
+              <span className="me-1 me-md-3 text-white">
                 <i className="bi bi-search me-1 "></i>
                 <span className="d-none d-sm-inline-block">Search</span>
               </span>
