@@ -1,13 +1,20 @@
 import Banner from "../../components/layout/banner/Banner";
 import CategoryCard from "../../components/layout/cards/CategoryCard";
+import ProductCard from "../../components/layout/cards/ProductCard";
 import HeroSlider from "../../components/layout/Hero/HeroSlider";
-import { categories, features , bannerDes } from "../../constants/data";
+import {
+  categories,
+  features,
+  bannerDes,
+  products,
+  bannerDes1,
+} from "../../constants/data";
 
 function Home() {
   return (
     <>
       <HeroSlider />
-      <section className="category-section section-spacing ">
+      <section className="category-section section-spacing">
         <div className="container">
           <div className="row">
             {/* loop through all categories */}
@@ -28,27 +35,45 @@ function Home() {
             {features.map((val, index) => {
               return (
                 <>
-                <div
-                  className="feature-section col-lg-3 col-md-6 col-sm-6 col-12 mb-3 mb-md-0 mt-5"
-                  key={index}
+                  <div
+                    className="feature-section col-lg-3 col-md-6 col-sm-6 col-12 mb-3 mb-md-0 mt-5"
+                    key={index}
                   >
-                  <div className="feature-item d-flex align-items-center flex-column flex-sm-row">
-                    <div className="feature-icon me-sm-3 me-0 mb-sm-0">
-                      <i className={val.icon}></i>
-                    </div>
-                    <div className="feature-text text-center text-sm-start">
-                      <h5 className="fw-bold mb-0">{val.title}</h5>
-                      <p className="mb-0 text-muted">{val.desc}</p>
+                    <div className="feature-item d-flex align-items-center flex-column flex-sm-row">
+                      <div className="feature-icon me-sm-3 me-0 mb-sm-0">
+                        <i className={val.icon}></i>
+                      </div>
+                      <div className="feature-text text-center text-sm-start">
+                        <h5 className="fw-bold mb-0">{val.title}</h5>
+                        <p className="mb-0 text-muted">{val.desc}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <Banner bannerInfo={bannerDes}/>
-            </>
+                </>
               );
             })}
+            <Banner bannerInfo={bannerDes} />
+
+            <div className="product-section ">
+              <div className="container">
+                <h2 className="section-title text-center fw-bold mb-5">
+                  Best seller products
+                </h2>
+                <div className="row">
+                  {products.map((product, index) => {
+                    return (
+                      <div className="col-lg-3 col-md-6 col-12">
+                        <ProductCard product={product} key={index} />
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        </section>
+      </section>
+      <Banner bannerInfo={bannerDes1} />
     </>
   );
 }

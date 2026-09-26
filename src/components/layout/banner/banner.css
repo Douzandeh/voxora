@@ -1,0 +1,25 @@
+.banner-section {
+  color: white;
+}
+.banner-section .banner-wrapper img {
+  position: absolute;
+  height: 100%;
+}
+
+/* Tablet */
+@media screen and (max-width: 991px) {
+  .banner-section .banner-wrapper img {
+    height: 100%;
+    object-fit: cover;
+    top: auto;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+  .banner-section .banner-wrapper img {
+    object-fit: contain;
+    top: -32%;
+    width: 65%;
+  }
+}
